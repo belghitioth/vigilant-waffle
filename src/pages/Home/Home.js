@@ -15,9 +15,9 @@ class Home extends Component{
                 <HeadNavbar/>
 
                 <header className="App-header">
-                    <h1>BuzzLink - Book an artist</h1>
+                    <h1>The DJ Hub - Book a DJ</h1>
                     <div className="buttons">
-                    <Button className ="button" variant="info"><Link to="/artists">BOOK AN ARTIST</Link></Button>
+                    <Button className ="button" variant="info"><Link to="/artists">BOOK A DJ</Link></Button>
                     <Button className ="button" variant="info"><Link to="/venues">BOOK A VENUE</Link></Button>
                     </div>
                 </header>
