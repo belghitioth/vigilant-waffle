@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c4e6d7ab-0d9e-4863-958d-b2881c7f3714" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,6 +52,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/artists/Artists.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Navbar.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -65,8 +75,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="152" selection-start-line="18" selection-start-column="152" selection-end-line="18" selection-end-column="152" />
+            <state relative-caret-position="345">
+              <caret line="23" column="150" selection-start-line="23" selection-start-column="150" selection-end-line="23" selection-end-column="150" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/venues/Venues.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -129,6 +148,38 @@
               <item name="thedjhub" type="b2602c69:ProjectViewProjectNode" />
               <item name="thedjhub" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="thedjhub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thedjhub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thedjhub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thedjhub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thedjhub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thedjhub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="artists" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thedjhub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thedjhub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thedjhub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thedjhub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="venues" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -176,11 +227,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564392439978</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update CI">
+      <created>1564394430524</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564394430524</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2352000" />
+    <option name="totallyTimeSpent" value="3230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1128" extended-state="0" />
@@ -212,7 +270,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Transfer project from Github to Gitlab CS" />
     <MESSAGE value="Add Gitlab CI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Gitlab CI" />
+    <MESSAGE value="Clean imports" />
+    <MESSAGE value="Update CI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update CI" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.js">
@@ -273,10 +333,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/artists/Artists.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="152" selection-start-line="18" selection-start-column="152" selection-end-line="18" selection-end-column="152" />
+        <state relative-caret-position="345">
+          <caret line="23" column="150" selection-start-line="23" selection-start-column="150" selection-end-line="23" selection-end-column="150" />
         </state>
       </provider>
     </entry>
