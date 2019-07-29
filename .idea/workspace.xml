@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c4e6d7ab-0d9e-4863-958d-b2881c7f3714" name="Default Changelist" comment="Transfer project from Github to Gitlab CS">
       <change afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="c4e6d7ab-0d9e-4863-958d-b2881c7f3714" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+>>>>>>> Add Gitlab CI
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,8 +71,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state>
               <caret selection-end-line="61" selection-end-column="35" />
+=======
+            <state relative-caret-position="270">
+              <caret line="18" column="152" selection-start-line="18" selection-start-column="152" selection-end-line="18" selection-end-column="152" />
+>>>>>>> Add Gitlab CI
             </state>
           </provider>
         </entry>
@@ -169,12 +179,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564389474076</updated>
+<<<<<<< HEAD
       <workItem from="1564389475554" duration="1990000" />
+=======
+      <workItem from="1564389475554" duration="2352000" />
+>>>>>>> Add Gitlab CI
     </task>
+    <task id="LOCAL-00001" summary="Add Gitlab CI">
+      <created>1564392439978</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564392439978</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1990000" />
+=======
+    <option name="totallyTimeSpent" value="2352000" />
+>>>>>>> Add Gitlab CI
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1128" extended-state="0" />
@@ -205,7 +231,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Transfer project from Github to Gitlab CS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Transfer project from Github to Gitlab CS" />
+    <MESSAGE value="Add Gitlab CI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Gitlab CI" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.js">
@@ -268,8 +295,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret selection-end-line="61" selection-end-column="35" />
+=======
+        <state relative-caret-position="270">
+          <caret line="18" column="152" selection-start-line="18" selection-start-column="152" selection-end-line="18" selection-end-column="152" />
+>>>>>>> Add Gitlab CI
         </state>
       </provider>
     </entry>
