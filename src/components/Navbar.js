@@ -17,7 +17,7 @@ class HeadNavbar extends Component{
 
         return (
             <Navbar className="navbar-form navbar-fixed-top" bg="light" expand="lg">
-                <Navbar.Brand><Link to="">Buzzlink</Link></Navbar.Brand>
+                <Navbar.Brand><Link to="">The DJ Hub</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
