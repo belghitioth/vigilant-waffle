@@ -1,0 +1,23 @@
+stages:
+  - build
+
+variables:
+  PROJECT_FRONT: thedjhub/front
+  PRODUCT_NAME: thedjhub
+  SERVICE_NAME: thedjhub/front
+  IMAGE_TAG: latest
+  GITLAB_URL:    https://gitlab.centralesupelec.fr
+  APP_VERSION: 0.1.0
+  DNS_PREFIX: front.tradescore
+
+########################################################################################################################
+#
+# BUILD & PUBLISH & DEPLOY CLUSTER
+#
+########################################################################################################################
+
+build_dev:
+  stage: build
+
+
+
