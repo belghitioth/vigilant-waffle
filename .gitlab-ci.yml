@@ -11,16 +11,22 @@ cache:
 
 # Name the stages involved in the pipeline
 stages:
-  - deploy
+  - test
+  - build
 
 # Job name for gitlab to recognise this results in assets for Gitlab Pages
 # https://docs.gitlab.com/ee/user/project/pages/introduction.html#gitlab-pages-requirements
 
-deploy:
-  stage: deploy
+build:
+  stage: build
   script:
   - npm install # Install all dependencies
   - npm run build --prod # Build for prod
   - cp public/index.html public/404.html # Not necessary, but helps with https://medium.com/@pshrmn/demystifying-single-page-applications-3068d0555d46
   only:
   - master # Only run on master branch
+
+test:
+  stage: test
+  script:
+    - npm install # Install all dependencies
