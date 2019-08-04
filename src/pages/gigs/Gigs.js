@@ -7,6 +7,8 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
+import Modal from 'react-bootstrap/Modal'
+
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 
@@ -24,6 +26,7 @@ class Gigs extends Component {
 
     componentDidMount() {
         let rootRef = firebase.database().ref();
+
         let barsRef= rootRef.child('bars');
 
         barsRef.on('value',snap =>{
@@ -42,7 +45,16 @@ class Gigs extends Component {
         })
     };
 
+
+
+
+
     render() {
+
+        // const [show, setShow] = React.useState(false);
+        // const handleClose = () => setShow(false);
+        // const handleShow = () => setShow(true);
+        //
 
         return (
             <div className="Gigs">
@@ -69,6 +81,20 @@ class Gigs extends Component {
                                 <Button size="small" color="primary">
                                     Find a gig
                                 </Button>
+                                {/*<Modal show={show} onHide={handleClose}>*/}
+                                {/*    <Modal.Header closeButton>*/}
+                                {/*        <Modal.Title>Modal heading</Modal.Title>*/}
+                                {/*    </Modal.Header>*/}
+                                {/*    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>*/}
+                                {/*    <Modal.Footer>*/}
+                                {/*        <Button variant="secondary" onClick={handleClose}>*/}
+                                {/*            Close*/}
+                                {/*        </Button>*/}
+                                {/*        <Button variant="primary" onClick={handleClose}>*/}
+                                {/*            Save Changes*/}
+                                {/*        </Button>*/}
+                                {/*    </Modal.Footer>*/}
+                                {/*</Modal>*/}
                                 <Button size="small" color="primary">
                                     Learn More
                                 </Button>
@@ -77,6 +103,7 @@ class Gigs extends Component {
                     ))}
                 </div>
             </div>
+
         );
     }
 }
