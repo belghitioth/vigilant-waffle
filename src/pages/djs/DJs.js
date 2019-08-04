@@ -10,34 +10,36 @@ import Button from "@material-ui/core/Button";
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 
-import "./Venues.css";
+import "./DJs.css";
 
-class Venues extends Component {
+class DJs extends Component {
 
     constructor(  ) {
         super();
         this.state= {
-            number_of_bars: 10,
-            bars: [],
+            number_of_djs: 10,
+            djs: [],
         };
     }
 
     componentDidMount() {
         let rootRef = firebase.database().ref();
-        let barsRef= rootRef.child('bars');
+        let artistsRef= rootRef.child('artists');
 
-        barsRef.on('value',snap =>{
-            let bars =snap.val();
+        artistsRef.on('value',snap =>{
+            let djs =snap.val();
             let newState = [];
-            for (let bar in bars) {
+            for (let dj in djs) {
                 newState.push({
-                    name: bars[bar].name,
-                    description: bars[bar].description,
-                    image: bars[bar].image,
+                    name: djs[dj].name,
+                    description: djs[dj].description,
+                    price: djs[dj].price,
+                    image: djs[dj].image,
+                    genre: djs[dj].genre,
                 });
             }
             this.setState({
-                bars: newState
+                djs: newState
             });
         })
     };
@@ -48,20 +50,23 @@ class Venues extends Component {
             <div className="Venues">
                 <HeadNavbar></HeadNavbar>
                 <div className="Cards">
-                    {this.state.bars.map(( bar ) => (
+                    {this.state.djs.map(( dj ) => (
                         <Card className="card">
                             <CardActionArea>
                                 <CardMedia
                                     className="media"
-                                    image={bar.image}
-                                    title={bar.name}
+                                    image={dj.image}
+                                    title={dj.name}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        {bar.name}
+                                        {dj.name}
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
-                                        {bar.description}
+                                        {dj.genre}
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                        {dj.price}€/hour
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -81,4 +86,4 @@ class Venues extends Component {
     }
 }
 
-export default Venues;
+export default DJs;

@@ -15,10 +15,13 @@ class Home extends Component{
                 <HeadNavbar/>
 
                 <header className="App-header">
-                    <h1>The DJ Hub - Book a DJ</h1>
+                    <h2>You need a DJ for your next party</h2>
+                    <br></br>
+                    <h4>Find the DJ that suits you in one week. <br></br>Bars, Clubs, Weddings, Private Parties, Brithday Parties ...</h4>
+
                     <div className="buttons">
-                    <Button className ="button" variant="info"><Link to="/artists">BOOK A DJ</Link></Button>
-                    <Button className ="button" variant="info"><Link to="/venues">BOOK A VENUE</Link></Button>
+                    <Button className ="button" variant="info"><Link to="/djs">Find your DJ</Link></Button>
+                    <a variant="info"><Link className="adj" to="/gigs">I'm a DJ</Link></a>
                     </div>
                 </header>
 

@@ -1,4 +1,4 @@
-.Venues {
+.Gigs {
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +25,7 @@
     flex-direction: column;
     align-self: center;
     min-width: 55vh;
+    max-width: 60vh;
 }
 
 .card{
