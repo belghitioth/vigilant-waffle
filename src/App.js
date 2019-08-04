@@ -3,10 +3,13 @@ import * as firebase from 'firebase/app';
 import 'firebase/database';
 import { HashRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Venues from "./pages/venues/Venues";
+import Gigs from "./pages/gigs/Gigs";
+import DJs from "./pages/djs/DJs";
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import reducers from "./redux/reducer"
 
 import "./App.css";
-import Artists from "./pages/artists/Artists";
 
 var firebaseConfig = {
     apiKey: "AIzaSyAPThA_o-fCWAFWbTKmxAgxLwIOUrV3XDg",
@@ -20,17 +23,21 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
+const store = createStore(reducers)
 
 class App extends Component{
 
     render() {
 
+
         return (
+            <Provider store={store}>
             <Router>
                 <Route exact path="/" component={Home} />
-                <Route path="/venues" component={Venues} />
-                <Route path="/artists" component={Artists} />
+                <Route path="/gigs" component={Gigs} />
+                <Route path="/djs" component={DJs} />
             </Router>
+            </Provider>
         );
     }
 }
