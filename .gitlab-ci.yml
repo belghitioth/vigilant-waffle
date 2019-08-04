@@ -18,18 +18,44 @@ cache:
 stages:
   - test
   - build
-
-# Job name for gitlab to recognise this results in assets for Gitlab Pages
-# https://docs.gitlab.com/ee/user/project/pages/introduction.html#gitlab-pages-requirements
-
-build:
-  stage: build
-  script:
-  - npm install # Install all dependencies
-  - npm run build --prod # Build for prod
-  - cp public/index.html public/404.html # Not necessary, but helps with https://medium.com/@pshrmn/demystifying-single-page-applications-3068d0555d46
+  - deploy
 
 test:
   stage: test
   script:
     - npm install # Install all dependencies
+
+build:
+  stage: build
+  dependencies:
+    - test
+  script:
+  - npm install # Install all dependencies
+  - npm run build --prod # Build for prod
+  - cp public/index.html public/404.html # Not necessary, but helps with https://medium.com/@pshrmn/demystifying-single-page-applications-3068d0555d46
+
+deploys3:
+  image: "python:latest"  # We use python because there is a well-working AWS Sdk
+  stage: deploy
+  dependencies:
+    - build      # We want to specify dependencies in an explicit way, to avoid confusion if there are different build jobs
+  before_script:
+    - pip install awscli # Install the SDK
+  script:
+    - aws s3 cp build s3://${BUCKET_NAME}/${CI_COMMIT_REF_SLUG} --recursive # Replace example-bucket with your bucket
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+    url: http://${BUCKET_NAME}.s3-website.${AWS_DEFAULT_REGION}.amazonaws.com/${CI_COMMIT_REF_SLUG}  # This is the url of the bucket we saved before
+    on_stop: clean_s3 # When the branch is merged, we clean up after ourself
+
+clean_s3:
+  image: "python:latest"
+  stage: deploy
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 rm s3://${BUCKET_NAME}/${CI_COMMIT_REF_SLUG} --recursive # Replace example-bucket with your bucket
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+    action: stop
+  when: manual
