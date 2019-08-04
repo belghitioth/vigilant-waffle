@@ -21,7 +21,7 @@ class Home extends Component{
 
                     <div className="buttons">
                     <Button className ="button" variant="info"><Link to="/djs">Find your DJ</Link></Button>
-                    <a variant="info"><Link className="adj" to="/gigs">I'm a DJ</Link></a>
+                   <Link className="adj" to="/gigs">I'm a DJ</Link>
                     </div>
                 </header>
 

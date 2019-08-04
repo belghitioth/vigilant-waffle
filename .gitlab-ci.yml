@@ -3,11 +3,16 @@
 image: node:alpine
 
 variables:
+  AWS_DEFAULT_REGION: eu-central-1 # The region of our S3 bucket
+  BUCKET_NAME: thedjhub.io         # Your bucket name
+
+
   PUBLIC_URL: /thedjhub
 # Cache node modules - speeds up future builds
 cache:
   paths:
     - node_modules
+    - vendor
 
 # Name the stages involved in the pipeline
 stages:
