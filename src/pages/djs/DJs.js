@@ -58,15 +58,17 @@ class DJs extends Component {
                                     image={dj.image}
                                     title={dj.name}
                                 />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
+                                <CardContent className="horizontalDJ">
+                                    <Typography gutterBottom variant="h4" component="h2">
                                         {dj.name}
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
+                                    <Typography gutterBottom variant="h5" color="secondary" component="h2">
                                         {dj.genre}
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        {dj.price}€/hour
+                                </CardContent>
+                                <CardContent>
+                                    <Typography variant="h6" color="textSecondary" component="p">
+                                        A partir de {dj.price} € /hour
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>

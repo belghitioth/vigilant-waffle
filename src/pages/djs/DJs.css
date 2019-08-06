@@ -33,3 +33,10 @@
 .media{
     height: 340px;
 }
+.horizontalDJ{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -35px;
+}
+
