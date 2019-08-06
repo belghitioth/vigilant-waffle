@@ -23,6 +23,7 @@ class HeadNavbar extends Component{
                         <Nav.Link><Link to="/gigs" className="link">Gigs</Link></Nav.Link>
                     </Nav>
                     <Nav className="mr-sm-1">
+                        <Nav.Link><Link to="/events" className="link">A Découvrir</Link></Nav.Link>
                         <Nav.Link><Link to="" className="link">Sign in</Link></Nav.Link>
                         <Nav.Link><Link to="" className="link">Sign up</Link></Nav.Link>
                     </Nav>

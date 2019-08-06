@@ -11,35 +11,37 @@ import Button from "@material-ui/core/Button";
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 
-import "./Gigs.css";
+import "./Events.css";
 
-class Gigs extends Component {
+class Events extends Component {
 
     constructor(  ) {
         super();
         this.state= {
-            number_of_bars: 10,
-            bars: [],
+            number_of_events: 10,
+            events: [],
         };
     }
 
     componentDidMount() {
         let rootRef = firebase.database().ref();
 
-        let barsRef= rootRef.child('bars');
+        let eventsRef= rootRef.child('events');
 
-        barsRef.on('value',snap =>{
-            let bars =snap.val();
+        eventsRef.on('value',snap =>{
+            let events =snap.val();
             let newState = [];
-            for (let bar in bars) {
+            for (let event in events) {
                 newState.push({
-                    name: bars[bar].name,
-                    description: bars[bar].description,
-                    image: bars[bar].image,
+                    name: events[event].name,
+                    description: events[event].description,
+                    image: events[event].image,
+                    date: events[event].date,
+                    price: events[event].price,
                 });
             }
             this.setState({
-                bars: newState
+                events: newState
             });
         })
     };
@@ -56,29 +58,37 @@ class Gigs extends Component {
         //
 
         return (
-            <div className="Gigs">
+            <div className="Events">
                 <HeadNavbar></HeadNavbar>
                 <div className="Cards">
-                    {this.state.bars.map(( bar ) => (
+                    {this.state.events.map(( event ) => (
                         <Card className="card">
                             <CardActionArea>
                                 <CardMedia
                                     className="media"
-                                    image={bar.image}
-                                    title={bar.name}
+                                    image={event.image}
+                                    title={event.name}
                                 />
+                                <CardContent className="horizontal">
+                                    <Typography gutterBottom variant="h5" color="secondary" component="h2">
+                                        {event.date}
+                                    </Typography>
+                                    <Typography variant="h6" color="textSecondary" component="p">
+                                        A partir de {event.price} €
+                                    </Typography>
+                                </CardContent>
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        {bar.name}
+                                       {event.name}
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
-                                        {bar.description}
+                                        {event.description}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" color="primary">
-                                    Trouver son gig
+                                    Billeterie
                                 </Button>
                                 {/*<Modal show={show} onHide={handleClose}>*/}
                                 {/*    <Modal.Header closeButton>*/}
@@ -95,7 +105,7 @@ class Gigs extends Component {
                                 {/*    </Modal.Footer>*/}
                                 {/*</Modal>*/}
                                 <Button size="small" color="primary">
-                                    En savoir plus
+                                    EN SAVOIR PLUS
                                 </Button>
                             </CardActions>
                         </Card>
@@ -107,4 +117,4 @@ class Gigs extends Component {
     }
 }
 
-export default Gigs;
+export default Events;

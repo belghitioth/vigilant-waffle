@@ -72,10 +72,10 @@ class DJs extends Component {
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" color="primary">
-                                    Book
+                                    Réserver
                                 </Button>
                                 <Button size="small" color="primary">
-                                    Learn More
+                                    En savoir plus
                                 </Button>
                             </CardActions>
                         </Card>

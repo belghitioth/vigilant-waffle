@@ -5,6 +5,8 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Gigs from "./pages/gigs/Gigs";
 import DJs from "./pages/djs/DJs";
+import Events from "./pages/events/Events";
+
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import reducers from "./redux/reducer"
@@ -36,6 +38,7 @@ class App extends Component{
                 <Route exact path="/" component={Home} />
                 <Route path="/gigs" component={Gigs} />
                 <Route path="/djs" component={DJs} />
+                <Route path="/events" component={Events} />
             </Router>
             </Provider>
         );
