@@ -27,7 +27,7 @@ test:
   script:
     - cd front-thedjhub && npm install
     - npm start & npx wait-on http://localhost:3000
-    - cypress run
+    - npx cypress run
 
 build:
   stage: build
