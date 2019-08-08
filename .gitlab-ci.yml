@@ -22,6 +22,8 @@ stages:
 
 test:
   stage: test
+  cache:
+    key: one-key-to-rule-them-all
   script:
     - cd front-thedjhub && npm install
     - npm start & npx wait-on http://localhost:3000
