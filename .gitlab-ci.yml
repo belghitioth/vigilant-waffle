@@ -23,8 +23,7 @@ stages:
 test:
   stage: test
   script:
-    - npm install cypress -g
-    - npm install wait-on -g
+    - cd front-thedjhub && npm install
     - npm start & wait-on http://localhost:3000
     - cypress run
 
