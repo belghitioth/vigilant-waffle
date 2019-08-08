@@ -10,8 +10,9 @@ variables:
   PUBLIC_URL: /thedjhub
 # Cache node modules - speeds up future builds
 cache:
+  key: one-key-to-rule-them-all
   paths:
-    - node_modules
+    - node_modules/
     - vendor
 
 # Name the stages involved in the pipeline
@@ -20,12 +21,12 @@ stages:
   - build
   - deploy
 
+before_script:
+  - cd front-thedjhub && npm install
+
 test:
   stage: test
-  cache:
-    key: one-key-to-rule-them-all
   script:
-    - cd front-thedjhub && npm install
     - npm start & npx wait-on http://localhost:3000
     - npx cypress run
 
